@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Sort
+import itertools
 
 
 
@@ -127,7 +128,7 @@ def quick_sort_helper(data, start, end):
     """
     快速排序递归方法
     """
-    if start = end:
+    if start == end:
         return
 
     q = quick_sort_partition(data, start, end)
@@ -141,6 +142,49 @@ def quick_sort(data, n):
     快速排序
     """
     quick_sort_helper(data, 0, n-1)
+
+
+
+def counting_sort(data):
+    """
+    计数排序
+    data为初始的数组
+    """
+    if not data or len(data) == 1:
+        return data
+
+    length = len(data)
+
+    temp_list = [0] * (max(data) + 1)
+    for num in data:
+        temp_list[num] += 1
+
+    # only support in py3
+    # temp_list = list(itertools.accumulate(temp_list))
+    for i in xrange(1, len(temp_list)):
+        temp_list[i] = temp_list[i] + temp_list[i-1]
+
+
+    result = [0] * length
+    i = len(temp_list) - 1
+    for num in data:
+        result[temp_list[num] - 1] = num
+        temp_list[num] -= 1
+
+    return result
+
+a1 = [1,2,3,4]
+a2 = [1,1,1,1]
+a3 = [4, 5, 0, 9, 3, 3, 1, 9, 8, 7]
+print counting_sort(a1)
+print counting_sort(a2)
+print counting_sort(a3)
+
+
+
+
+
+
 
 
 
