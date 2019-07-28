@@ -44,6 +44,11 @@
 4. 删除堆顶元素
 5. 堆排序
 
-#### bfs_dfs.py
+#### bfs_dfs.py BFS搜索&DFS搜索
 1. BFS 搜索
 2. DFS 搜索
+
+#### string_match 字符串匹配
+1. BF算法
+2. RK算法
+3. BM算法
