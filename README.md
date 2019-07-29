@@ -1,4 +1,4 @@
-# data_structure
+# data_structure_and_algorithm
 ## 数据结构与算法学习实践笔记
 #### linkedlist.py 链表操作
 1. 单链表反转 
