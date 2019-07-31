@@ -1,5 +1,5 @@
-# data_structure
-## 数据结构学习实践笔记
+# data_structure_and_algorithm
+## 数据结构与算法学习实践笔记
 #### linkedlist.py 链表操作
 1. 单链表反转 
 2. 链表中环的检测
@@ -52,3 +52,4 @@
 1. BF算法
 2. RK算法
 3. BM算法
+4. KMP算法
